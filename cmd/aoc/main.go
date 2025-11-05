@@ -9,6 +9,7 @@ import (
 	"strconv"
 
 	"github.com/bigsapper/advent-of-code-2024-go/internal/day06"
+	"github.com/bigsapper/advent-of-code-2024-go/internal/day07"
 	"github.com/bigsapper/advent-of-code-2024-go/internal/runner"
 )
 
@@ -21,13 +22,16 @@ func getSolver(day int) (solver, error) {
     switch day {
     case 6:
         return day06.New(), nil
+    case 7:
+        return day07.New(), nil
     default:
         return nil, fmt.Errorf("day %d not implemented", day)
     }
 }
 
-// go test ./... -cover
-// go run ./cmd/aoc --day 6 --part 1 --input inputs\day06.txt
+// go test -v ./... -cover
+// go build -x -o .\bin\aoc.exe .\cmd\aoc
+// .\bin\aoc --day 6 --part 2 --input inputs\day06.txt
 func main() {
     dayFlag := flag.Int("day", 6, "day number")
     partFlag := flag.Int("part", 1, "part number (1 or 2)")
