@@ -1,15 +1,15 @@
 package main
 
 import (
-    "flag"
-    "fmt"
-    "log"
-    "os"
-    "path/filepath"
-    "strconv"
+	"flag"
+	"fmt"
+	"log"
+	"os"
+	"path/filepath"
+	"strconv"
 
-    "github.com/bigsapper/advent-of-code-2024-go/internal/day06"
-    "github.com/bigsapper/advent-of-code-2024-go/internal/runner"
+	"github.com/bigsapper/advent-of-code-2024-go/internal/day06"
+	"github.com/bigsapper/advent-of-code-2024-go/internal/runner"
 )
 
 type solver interface {
@@ -26,6 +26,7 @@ func getSolver(day int) (solver, error) {
     }
 }
 
+// go run ./cmd/aoc --day 6 --part 1 --input inputs\day06.txt
 func main() {
     dayFlag := flag.Int("day", 6, "day number")
     partFlag := flag.Int("part", 1, "part number (1 or 2)")
