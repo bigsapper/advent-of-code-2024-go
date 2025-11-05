@@ -26,6 +26,7 @@ func getSolver(day int) (solver, error) {
     }
 }
 
+// go test ./... -cover
 // go run ./cmd/aoc --day 6 --part 1 --input inputs\day06.txt
 func main() {
     dayFlag := flag.Int("day", 6, "day number")
